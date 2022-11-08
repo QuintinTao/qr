@@ -12,6 +12,8 @@ public class NonVehicle {
 
     private String name;
 
+    private String nameStr;
+
     @Override
     public String toString() {
         return "NonVehicle{" +
@@ -30,6 +32,8 @@ public class NonVehicle {
 
     private String sno;
 
+    private String snoStr;
+
     private String dept;
 
     private String starTimeStr;
@@ -40,6 +44,22 @@ public class NonVehicle {
 
     public void setPov(String pov) {
         this.pov = pov;
+    }
+
+    public String getNameStr() {
+        return nameStr;
+    }
+
+    public void setNameStr(String nameStr) {
+        this.nameStr = nameStr;
+    }
+
+    public String getSnoStr() {
+        return snoStr;
+    }
+
+    public void setSnoStr(String snoStr) {
+        this.snoStr = snoStr;
     }
 
     public String getPass() {
@@ -78,7 +98,8 @@ public class NonVehicle {
     }
 
     public void setName(String name) {
-        this.name = CompareUtils.sensitiveProtection(name);
+        this.name = name;
+        this.nameStr = CompareUtils.sensitiveProtection(name);
     }
 
     public String getNovNum() {
@@ -94,7 +115,8 @@ public class NonVehicle {
     }
 
     public void setSno(String sno) {
-        this.sno = CompareUtils.sensitiveProtectionMuti(sno);
+        this.sno = sno;
+        this.snoStr = CompareUtils.sensitiveProtectionMuti(sno);
     }
 
     public String getDept() {
